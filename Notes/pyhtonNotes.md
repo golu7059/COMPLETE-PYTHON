@@ -5,10 +5,10 @@ __*ython is a high-level, interpreted, and general-purpose programming language.
 >  studied from hitesh sir chai and code :
 > <https://www.youtube.com/watch?v=OEKrDogH5ew&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s&index=4&ab_channel=ChaiaurCode>
 ### Inner working of python : 
-![image](imaegs/python.png)
+![image](images/python.png)
 
 ### working of python virtual machine 
-![image](imaegs/pvm.png)
+![image](images/pvm.png)
 ### It is used for:
  - web development (server-side),
  - software development,
@@ -129,7 +129,7 @@ print(languages[2])  # Output: Python
 ## mutable and Immutable  : 
 Mutable objects in Python are those that can be changed after they are created, like lists or dictionaries. Immutable objects, on the other hand, cannot be changed after they are created, such as strings, integers, or tuples.
 
-![image](imaegs/mutablerAndImmutable.png)
+![image](images/mutablerAndImmutable.png)
 
 
  __*`Actual meaningo of mutable and Immutable is that is there any change in internal memory refrence of the objects : If changing value value without creatine new refrence that means it's Mutable and if it's change the refrence to change or modify the value it's Immutable `*__
