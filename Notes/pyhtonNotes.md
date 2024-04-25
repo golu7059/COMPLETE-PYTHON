@@ -5,10 +5,10 @@ __*ython is a high-level, interpreted, and general-purpose programming language.
 >  studied from hitesh sir chai and code :
 > <https://www.youtube.com/watch?v=OEKrDogH5ew&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s&index=4&ab_channel=ChaiaurCode>
 ### Inner working of python : 
-![](imaegs/python.png)
+![image](imaegs/python.png)
 
 ### working of python virtual machine 
-![](imaegs/pvm.png)
+![image](imaegs/pvm.png)
 ### It is used for:
  - web development (server-side),
  - software development,
@@ -71,7 +71,10 @@ from importlib import reload
 reload(file_name)
 ```
 
-## Data types in python 
+
+# Data types in python 
+
+## *Python has several built-in data types that allow you to work with different kinds of values*
  ### 1. Numeric Data Types:
 
  - __*Integers (int):*__ Represent positive or negative whole numbers without fractions or decimals. There’s no limit to the length of an integer value in Python.
@@ -118,9 +121,49 @@ print(languages[2])  # Output: Python
 ### 5. Set Data Types:
  - __*Set (set):*__ Holds a collection of unique items.
  - __*FrozenSet (frozenset):*__ Similar to a set but immutable.
+  ### 6. None : no value 
+          Eg : We are calling weather API anbd we don't get any value then we can't just write 0 , so None is used 
 
 `Remember, Python treats everything as an object, and data types are actually classes. Variables are instances (objects) of these classes. You can use the type() function to determine the data type of a variable.`
 
 ## mutable and Immutable  : 
 Mutable objects in Python are those that can be changed after they are created, like lists or dictionaries. Immutable objects, on the other hand, cannot be changed after they are created, such as strings, integers, or tuples.
-!["" ](imaegs/mutablerAndImmutable.png)
+
+![image](imaegs/mutablerAndImmutable.png)
+
+
+ __*`Actual meaningo of mutable and Immutable is that is there any change in internal memory refrence of the objects : If changing value value without creatine new refrence that means it's Mutable and if it's change the refrence to change or modify the value it's Immutable `*__
+
+
+## Intresting codes
+```
+>>> repr('golu')
+"'golu'"
+>>> str('golu')
+'golu'
+>>> print('golu')
+golu
+```
+
+```
+>>> import math
+>>> math.floor(3.9)
+3
+>>> math.floor(-4.2)
+-5
+```
+### conversion between decimal and binary , octal , hexadecimal : 
+```
+>>> 0o20
+16
+>>> 0xFF
+255
+>>> 0b1000
+8
+>>> oct(64)
+'0o100'
+>>> hex(64)
+'0x40'
+>>> bin(64)
+'0b1000000'
+```
