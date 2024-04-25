@@ -27,4 +27,100 @@ __*ython is a high-level, interpreted, and general-purpose programming language.
  8. `Community and Ecosystem`: Python has a large and active community, which contributes to its ecosystem. There are many third-party libraries and frameworks available for various purposes, making Python a versatile language for many applications.
  9. `Versatile`: Python is a versatile language that can be used for various purposes, including web development, data science, artificial intelligence, game development, and more.
 
+### python shell
 
+__*Python Shell is used to test Python code or as a learning tool. It is a complete Python interpreter in a drop-down window Features:*__
+
+
+```
+>>> import os
+>>> os.getcwd()
+'C:\\Users\\golu\\OneDrive\\Desktop\\python\\class\\01_basics'
+
+>>> import sys
+>>> sys.platform
+'win32'
+
+>>> for c in "student" :
+...     print(c)
+...
+s
+t
+u
+d
+e
+n
+t
+```
+how import and function use of modules work . Module are pre-written code by others we just import them and use their functions using .(dot) 
+
+Eg :  form basics folder 
+```
+>>> import hello_chai
+chai aur python
+lemon tea
+>>> hello_chai.chai("chai for Golu")
+chai for Golu
+>>>
+```
+#### if we are working on shell and did some changes in file , which was imported in this/current file then `changes will not reflected` . so to see changes we have to close the shell and come back .
+*But python provide a solution for this . so instead of doing above we can use a command  :* 
+
+```
+from importlib import reload
+reload(file_name)
+```
+
+## Data types in python 
+ ### 1. Numeric Data Types:
+
+ - __*Integers (int):*__ Represent positive or negative whole numbers without fractions or decimals. There’s no limit to the length of an integer value in Python.
+  
+ - __*Floating-Point Numbers (float):*__ Represent real numbers with a decimal point. They are accurate up to 15 decimal places.
+
+ - __*Complex Numbers (complex):*__ Represent numbers in the form (real part) + (imaginary part)j.
+ - 
+**Example:**
+
+```
+a = 5
+print("Type of a:", type(a))  # Output: Type of a: <class 'int'>
+
+b = 5.0
+print("\nType of b:", type(b))  # Output: Type of b: <class 'float'>
+
+c = 2 + 4j
+print("\nType of c:", type(c))  # Output: Type of c: <class 'complex'>
+
+```
+### 2. Sequence Data Types:
+   
+ - __*List (list):*__  An ordered collection of similar or different items, enclosed in square brackets ([]).
+  
+ - __*Tuple (tuple):*__ Similar to a list but immutable (cannot be modified once created), enclosed in parentheses (()).
+  
+ - __*Range (range):*__ Represents an arithmetic progression of integers.
+  
+  **Example :**
+  ```
+  languages = ["Swift", "Java", "Python"]
+print(languages[0])  # Output: Swift
+print(languages[2])  # Output: Python
+
+  ```
+
+### 3. Mapping Data Type:
+ - __*Dictionary (dict):*__ Holds data in key-value pairs. Keys are unique and associated with corresponding values.
+
+### 4. Boolean Data Type:
+ - __*Boolean (bool):*__ Represents either True or False.
+
+### 5. Set Data Types:
+ - __*Set (set):*__ Holds a collection of unique items.
+ - __*FrozenSet (frozenset):*__ Similar to a set but immutable.
+
+`Remember, Python treats everything as an object, and data types are actually classes. Variables are instances (objects) of these classes. You can use the type() function to determine the data type of a variable.`
+
+## mutable and Immutable  : 
+Mutable objects in Python are those that can be changed after they are created, like lists or dictionaries. Immutable objects, on the other hand, cannot be changed after they are created, such as strings, integers, or tuples.
+!["" ](imaegs/mutablerAndImmutable.png)
