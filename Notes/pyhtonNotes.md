@@ -287,6 +287,33 @@ True
 
 ## String in python 
 In Python, strings are used for representing textual data. A string is a sequence of characters enclosed in either single quotes ('') or double quotes (“”).
+### *Single ,double and triple quote String :*
+    
+####  3. triple String : Multi-line strings using triple quotes. End of lines are included by default. 
+
+
+            Example : \
+            my_str = """ I\
+            am\
+            a\
+            Geek !"""
+
+```
+>>> str1 = """I """
+>>> str2 = """am a """
+>>> str3 = """Geek"""
+
+>>> # check data type of str1, str2 & str3
+>>> print(type(str1))
+<class 'str'>
+>>> print(type(str2))
+<class 'str'>
+>>> print(type(str3))
+<class 'str'>
+
+>>> print(str1 + str2 + str3)
+I am a Geek
+```
 
 #### *Imp codes :*
 ```
@@ -378,6 +405,20 @@ golu
 >>> print(chai.count("chai"))
 3
 ```
+
+## Membership operator :
+ ### *It's basically says given element is presentn or not in the given set of data :*
+ ```
+ >>> chai = "Masala Chai chai chai chai"
+>>> print ("chai" in chai)
+True
+
+>>> print("milk" in chai)
+False
+ 
+>>> print("milk" not in chai)
+True
+```
 ### *. format Method:*
 ```
 >>> chai_type = "Masala"
@@ -439,3 +480,319 @@ SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in positio
 c:\user\pwd
 ```
 
+## List in Python : 
+
+Lists are used to store multiple items in a single variable.
+
+Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+
+Lists are created using square brackets: [ ]
+
+```
+>>> tea_varities = ["Black","Green","Oolang","White"]
+>>> print(tea_varities)
+['Black', 'Green', 'Oolang', 'White']
+
+>>> print(tea_varities[-1])
+White
+
+>>> print(len(tea_varities))
+4
+
+>>> tea_varities[3] = "Herbal"
+>>> print(tea_varities)
+['Black', 'Green', 'Oolang', 'Herbal']
+
+>>> tea_varities[1:2] = ["Lemon"]
+>>> print(tea_varities)
+['Black', 'Lemon', 'Oolang', 'Herbal']
+
+>>> tea_varities[1:3]
+['Lemon', 'Oolang']
+
+>>> tea_varities[1:3] = ["Green" , "Masala"]
+>>> print(tea_varities)
+['Black', 'Green', 'Masala', 'Herbal']
+
+>>> tea_varities[1:1]
+[]
+
+>>> tea_varities[1:1] = ["test","test"]
+>>> print(tea_varities)
+['Black', 'test', 'test', 'Green', 'Masala', 'Herbal']
+
+>>> tea_varities[1:3] = []
+>>> print(tea_varities)
+['Black', 'Green', 'Masala', 'Herbal']
+
+>>> for tea in tea_varities:
+...     print(tea)
+...
+Black
+Green
+Masala
+Herbal
+
+>>> for tea in tea_varities:
+...     print(tea , end =" - ")
+...
+Black - Green - Masala - Herbal - >>>
+
+
+>>> if "Oolong" in tea_varities :
+        print("yes , Present")
+    else :
+        print("No , not present")
+
+No , not present
+
+>>> tea_varities.append("Oolong")
+>>> if "Oolong" in tea_varities :
+        print("yes , Present")
+    else :
+        print("No , not present")
+
+yes , Present
+
+>>> tea_varities.pop()
+'Oolong'
+
+>>> tea_varities.remove("Green")
+>>> print(tea_varities)
+['Black', 'Masala', 'Herbal']
+
+>>> tea_varities.insert(1,"Yellow")
+>>> print(tea_varities)
+['Black', 'Yellow', 'Masala', 'Herbal']
+
+>>> copy = tea_varities
+>>> copy1 = tea_varities.copy()
+>>> copy1
+['Black', 'Yellow', 'Masala', 'Herbal']
+>>>
+```
+### *difference between copy = tea_varities direct and using `.copy()` function is that .copy have own refrence but if we do directly then it will just take refrece value , but if we do any change then refrence will be changed*
+
+## Python – List Comprehension
+
+A Python list comprehension consists of brackets containing the expression, which is executed for each element along with the for loop to iterate over each element in the Python list. 
+```
+>>> squared_nums = [x**2 for x in range(10)]
+>>> squared_nums
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>>
+```
+
+## Dictionary in Python :
+
+```
+
+>>> chai_types = {"Masala" : "Spicy" , "Ginger" : "Zesty"
+ , "Green" : "Mild"}
+>>> chai_types
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Mild'}
+
+>>> chai_types.get("Ginger")
+'Zesty'
+
+>>> chai_types.get("Gingert")
+>>> chai_types["golu"]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'golu'
+
+>>> for chai in chai_types:
+        print(chai)
+Masala
+Ginger
+Green
+
+>>> for chai in chai_types:
+        print (chai , chai_types[chai])
+Masala Spicy
+Ginger Zesty
+Green Mild
+
+>>> for key , value in chai_types.items():
+        print(key,value)
+Masala Spicy
+Ginger Zesty
+Green Mild
+
+
+>>> if "Masala" in chai_types :
+        print("I have masala chai")
+
+I have masala chai
+>>> print(len(chai_types))
+3
+
+>>> chai_types
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Mild'}
+
+>>> chai_types["Earl Grey"] = "Citrus"
+>>> chai_types
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Mild', 'Earl Grey': 'Citrus'}
+
+>>> chai_types.pop("Ginger")
+'Zesty'
+
+>>> chai_types
+{'Masala': 'Spicy', 'Green': 'Mild', 'Earl Grey': 'Citrus'}
+
+>>> chai_types.popitem()
+('Earl Grey', 'Citrus')
+
+>>> chai_types
+{'Masala': 'Spicy', 'Green': 'Mild'}
+
+>>> del chai_types["Green"]
+>>> chai_types
+{'Masala': 'Spicy'}
+
+>>> copy = chai_types.copy()
+>>> copy
+{'Masala': 'Spicy'}
+```
+### *2-d dictionary :*
+```
+>>> tea_shop = {
+... "chai" : {"Masala" : "Spicy" , "Ginger" : "Zesty"},
+... "tea" : {"Masala" : "Spicy" , "Ginger" : "Zesty"} }
+
+>>> tea_shop
+{'chai': {'Masala': 'Spicy', 'Ginger': 'Zesty'}, 'tea': {'Masala': 'Spicy', 'Ginger': 'Zesty'}}
+>>> tea_shop["tea"]
+{'Masala': 'Spicy', 'Ginger': 'Zesty'}
+```
+### *comprehension*
+```
+>>> squared_num = {x:x**2 for x in range(10)}
+>>> squared_num
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+>>> squared_num.clear()
+>>> squared_num
+{}
+```
+### *Making dictionary :*
+```
+>>> keys = ["Masala" , "Ginger","Lemon"]
+>>> default_value = "Delicious"
+>>> new_dict = dict.fromkeys(keys,default_value)
+>>> new_dict
+{'Masala': 'Delicious', 'Ginger': 'Delicious', 'Lemon': 'Delicious'}
+>>>
+```
+
+## Tuples in python :
+ ### *similar to list but It's Immutable and useparenthesis ()*
+
+```
+>>> tup = (1,2,3,3,4,5)
+>>> tup[0]
+1
+>>> tup[-2]
+4
+
+>>> tup[-2] = 10
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+
+>>> len(tup)
+6
+
+>>> t2 = (3,5,7,8,9,10)
+>>> all = tup + t2
+>>> all
+(1, 2, 3, 3, 4, 5, 3, 5, 7, 8, 9, 10)
+
+>>> if 7 in all :
+        print("7 is present")
+7 is present
+
+>>> all.count(3)
+3
+>>> all.count(4)
+1
+```
+```
+>>> (one , two ,three , three , four , five) = tup
+>>> one
+1
+>>> three
+3
+>>> four
+4
+>>> type(one)
+<class 'int'>
+```
+
+## Scopes and closure in python :
+ scopes are also known as `namespaces`
+
+
+
+ ## Virtual Environment in python :
+ ### *Certainly! In Python, you can create virtual environments to isolate your projects and manage dependencies. Let me explain how to create and use virtual environments:*
+
+ ```
+ pip install virtualenv
+ or 
+ pip3 install virtualewnv
+ ```
+
+#### `Why Use Virtual Environments?`
+
+1. __*Preventing Version Conflicts:*__ Virtual environments allow you to install Python packages in an isolated location, avoiding conflicts between different projects. Each project can have its own set of dependencies.
+2. __*Easy Reproducibility:*__ You can define exact package versions in a requirements.txt file, ensuring that your project works consistently across different environments.
+3. __*Works Everywhere:*__ Even if you don’t have administrator rights (root access), you can create and use virtual environments.
+## `Creating a Virtual Environment:`
+The recommended way to create virtual environments is using the venv module (available in Python 3.3 and later).
+
+Open your terminal or command prompt and run:
+```
+python -m venv /path/to/new/virtual/environment
+
+Eg : 
+python -m venv .env
+```
+
+*Activating the Virtual Environment:*
+To activate the virtual environment, use the appropriate command based on your operating system:
+```
+On Windows:
+.venv\Scripts\activate
+
+On macOS and Linux:
+source .venv/bin/activate
+```
+Once activated, your shell prompt will change to indicate that you are working within the virtual environment.
+### `requirement.txt file`
+```
+pip list > requirement.txt
+```
+
+`How a Virtual Environment Works Internally:`
+
+A virtual environment contains a specific Python interpreter and software libraries needed for your project.
+It’s isolated from other virtual environments and system-wide Python installations.
+
+You don’t place any project code directly in the environment; it’s meant for managing dependencies.
+
+*Deactivating the Virtual Environment:*
+
+To exit the virtual environment, simply run:
+```
+deactivate
+```
+*Deleting a Virtual Environment:*
+
+Virtual environments are considered disposable. You can delete and recreate them easily.
+To delete a virtual environment, just remove the corresponding directory.
+
+
+### *`Remember, virtual environments are powerful tools for managing dependencies and ensuring consistent behavior across different projects.`* 
+
+## Object-Oriented Programming in python :
